@@ -1,3 +1,6 @@
+from ast import Str
+
+
 def hotel_names_loop(hotels):
     hotel_names = []
     for i in range(len(hotels)):
@@ -54,10 +57,53 @@ given = [2, 5, 3, 4, 1]
 amenities = ['free wifi', 'breakfast', 'gym', 'breakfast', 'pool', 'restaurant']
 words = "any type type of words of"
 hotels = [{'name': 'Hilton', 'locations': 2345}, {'name': 'Accor', 'locations':789}, {'name': 'W', 'locations':678}]
-print(f'hotel_names_loop {hotel_names_loop(hotels)}')
-print(f'hotel_names_compr {hotel_names_compr(hotels)}')
-print(f'hotel_names_map {hotel_names_map()}')
-print(f'word_count {word_count(words)}')
-print(f'flip_flop {flip_flop(a=1,b=2)}')
-print(f'remove_dublicates {remove_dublicates(amenities)}')
-print(f'multiply_with_exception {multiply_with_exception_current(given)}')
+# print(f'hotel_names_loop {hotel_names_loop(hotels)}')
+# print(f'hotel_names_compr {hotel_names_compr(hotels)}')
+# print(f'hotel_names_map {hotel_names_map()}')
+# print(f'word_count {word_count(words)}')
+# print(f'flip_flop {flip_flop(a=1,b=2)}')
+# print(f'remove_dublicates {remove_dublicates(amenities)}')
+# print(f'multiply_with_exception {multiply_with_exception_current(given)}')
+
+nums = [2,11,7,15]
+target = 26
+paths = [["A","Z"]]
+
+def twoSum(nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        d = {}
+        for i, j in enumerate(nums):
+            r = target - j
+            if r in d: return [d[r], i]
+            d[j] = i
+        
+# print(f'twoSum {twoSum(nums, target)}')
+
+# def destCity(paths):
+#     d={}
+#     for i in range(len(paths)):
+#         d[paths[i][0]] = i 
+#     for i in range(len(paths)):
+#         if paths[i][1] not in d: return paths[i][1]
+
+# print(f'destCity {destCity(paths)}')
+
+s = "Was it a car or a cat I saw"
+
+def string(str):
+    texts = str.replace(" ", "")
+    print(texts)
+    texts = [s.lower() for s in texts]
+    print(texts)
+
+    # texts = texts[::-1]
+    # print (texts==str)
+    # print(texts)
+    
+    return texts==texts[::-1]
+
+print(f'string {string(s)}')
